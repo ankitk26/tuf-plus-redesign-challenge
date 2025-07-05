@@ -26,7 +26,11 @@ type Props = {
 export default function PlanCard(props: Props) {
   // Format price to INR
   const formatPrice = (price: number) => {
-    return `₹${price.toLocaleString()}`;
+    return Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0,
+    }).format(price);
   };
 
   // Calculate final price after discount

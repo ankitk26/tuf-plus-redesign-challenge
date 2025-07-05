@@ -10,7 +10,7 @@ export default function PlanComparison() {
   const [currentTab, setCurrentTab] = useState("tuf-free");
 
   return (
-    <section className="space-y-8">
+    <section className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-2xl font-medium">Compare what you learn</h3>
         <div>
