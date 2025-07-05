@@ -9,7 +9,7 @@ import {
   DatabaseIcon,
   FileDigitIcon,
   LightbulbIcon,
-  MonitorIcon as MonitorCogIcon,
+  MonitorCogIcon,
   NetworkIcon,
   NotebookTextIcon,
 } from "lucide-react";

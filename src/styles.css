@@ -144,3 +144,7 @@ code {
 .font-mono {
   font-family: var(--font-mono);
 }
+
+button {
+  cursor: pointer;
+}
