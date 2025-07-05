@@ -14,7 +14,7 @@ export default function Hero() {
           ONE SUBSCRIPTION
         </h1>
       </div>
-      <p className="text-muted-foreground font-mono text-sm">
+      <p className="text-muted-foreground text-center font-mono text-sm">
         The most trusted platform for engineers to upskill and crack tech
         interviews in the least time
       </p>
