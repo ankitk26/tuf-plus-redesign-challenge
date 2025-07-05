@@ -1,5 +1,6 @@
 import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import { defineConfig } from "vite";
+import path from "path";
 
 export default defineConfig({
   plugins: [
@@ -8,4 +9,9 @@ export default defineConfig({
       autoCodeSplitting: true,
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });
