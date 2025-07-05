@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import OfferingCard from "./offering-card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Badge } from "./ui/badge";
 
 export default function Offerings() {
   return (
@@ -39,9 +40,10 @@ export default function Offerings() {
               </TabsTrigger>
               <TabsTrigger
                 value="premium"
-                className="px-4 py-3 lg:px-8 lg:py-4 text-sm lg:text-base whitespace-nowrap"
+                className="px-4 py-4 lg:px-8 lg:py-4 text-sm lg:text-base whitespace-nowrap"
               >
                 Premium
+                <Badge>New</Badge>
               </TabsTrigger>
               <TabsTrigger
                 value="core-subjects"
@@ -54,12 +56,14 @@ export default function Offerings() {
                 className="px-4 py-3 lg:px-8 lg:py-4 text-sm lg:text-base whitespace-nowrap"
               >
                 System Design
+                <Badge>New</Badge>
               </TabsTrigger>
               <TabsTrigger
                 value="aptitude"
                 className="px-4 py-3 lg:px-8 lg:py-4 text-sm lg:text-base whitespace-nowrap"
               >
                 Aptitude
+                <Badge>New</Badge>
               </TabsTrigger>
             </TabsList>
           </div>

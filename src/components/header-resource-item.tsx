@@ -1,28 +1,43 @@
-import { type LucideProps } from "lucide-react";
-import { DropdownMenuItem } from "./ui/dropdown-menu";
-import { Badge } from "./ui/badge";
+"use client";
 
-type Props = {
-  icon: React.ComponentType<LucideProps>;
+import type { LucideIcon } from "lucide-react";
+
+interface HeaderResourceItemProps {
+  icon: LucideIcon;
   title: string;
   subtitle: string;
   isNew?: boolean;
-};
+  onClick?: () => void;
+}
 
-export default function HeaderResourceItem(props: Props) {
-  const IconComponent = props.icon; // Renaming for clarity
-
+export default function HeaderResourceItem({
+  icon: Icon,
+  title,
+  subtitle,
+  isNew,
+  onClick,
+}: HeaderResourceItemProps) {
   return (
-    <DropdownMenuItem className="flex items-center gap-4 py-3">
-      {/* Now you can render it as a component */}
-      <IconComponent className="stroke-primary" />
-      <div className="flex flex-col space-y-1">
-        <div className="flex items-center gap-2">
-          <h3 className="font-semibold">{props.title}</h3>
-          {props.isNew && <Badge>New</Badge>}
-        </div>
-        <small className="text-muted-foreground">{props.subtitle}</small>
+    <div
+      className="flex items-start gap-3 p-3 hover:bg-muted rounded-md cursor-pointer transition-colors"
+      onClick={onClick}
+    >
+      <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10 mt-0.5">
+        <Icon className="h-4 w-4 text-primary" />
       </div>
-    </DropdownMenuItem>
+      <div className="flex-1 space-y-1">
+        <div className="flex items-center gap-2">
+          <span className="font-medium text-sm">{title}</span>
+          {isNew && (
+            <span className="bg-primary text-primary-foreground px-1.5 py-0.5 rounded text-xs font-mono">
+              New
+            </span>
+          )}
+        </div>
+        <p className="text-xs text-muted-foreground leading-relaxed">
+          {subtitle}
+        </p>
+      </div>
+    </div>
   );
 }
