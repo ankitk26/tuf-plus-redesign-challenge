@@ -14,8 +14,8 @@ import {
   NotebookTextIcon,
 } from "lucide-react";
 import OfferingCard from "./offering-card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { Badge } from "./ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 
 export default function Offerings() {
   return (
@@ -28,7 +28,7 @@ export default function Offerings() {
       </div>
 
       <div className="border rounded-lg p-4 lg:p-6">
-        <Tabs className="space-y-6">
+        <Tabs defaultValue="dsa" className="space-y-6">
           {/* Responsive Tabs List */}
           <div className="overflow-x-auto">
             <TabsList className="bg-transparent w-full justify-start min-w-max">
